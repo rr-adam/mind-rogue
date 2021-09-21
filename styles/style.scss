@@ -438,38 +438,38 @@ section.selected {
                 left:0;
 
                 .wall {
-                    background: url('/graphics/other/cells/cell2.png');
+                    background: url('./graphics/other/cells/cell2.png');
                 }
 
                 .floor {
-                    background: url('/graphics/other/cells/cell1.png');
+                    background: url('./graphics/other/cells/cell1.png');
                 }
 
                 .stairs {
-                    background: url('/graphics/other/cells/stairs.png');
+                    background: url('./graphics/other/cells/stairs.png');
                 }
 
                 // player classes
                 .legion {
-                    background: url('/graphics/heroes/ingame/legion.gif');
+                    background: url('./graphics/heroes/ingame/legion.gif');
                 }
                 .focus {
-                    background: url('/graphics/heroes/ingame/focus.gif');
+                    background: url('./graphics/heroes/ingame/focus.gif');
                 }
                 .monk {
-                    background: url('/graphics/heroes/ingame/monk.gif');
+                    background: url('./graphics/heroes/ingame/monk.gif');
                 }
                 .thief {
-                    background: url('/graphics/heroes/ingame/thief.gif');
+                    background: url('./graphics/heroes/ingame/thief.gif');
                 }
                 .mage {
-                    background: url('/graphics/heroes/ingame/mage.gif');
+                    background: url('./graphics/heroes/ingame/mage.gif');
                 }
                 .king {
-                    background: url('/graphics/heroes/ingame/king.gif');
+                    background: url('./graphics/heroes/ingame/king.gif');
                 }
                 .berserk {
-                    background: url('/graphics/heroes/ingame/berserk.gif');
+                    background: url('./graphics/heroes/ingame/berserk.gif');
                 }
 
                 .cell {
@@ -507,7 +507,7 @@ section.selected {
             }
 
             #right {
-                background: url('/graphics/other/icons/controls2.png');
+                background: url('./graphics/other/icons/controls2.png');
                 background-repeat: no-repeat;
                 background-size: 100% 100%;
 
@@ -515,28 +515,28 @@ section.selected {
                 
             }
             #left {
-                background: url('/graphics/other/icons/controls1.png');
+                background: url('./graphics/other/icons/controls1.png');
                 background-repeat: no-repeat;
                 background-size: 100% 100%;
 
                 grid-area: left;
             }
             #down {
-                background: url('/graphics/other/icons/controls4.png');
+                background: url('./graphics/other/icons/controls4.png');
                 background-repeat: no-repeat;
                 background-size: 100% 100%;
 
                 grid-area: bottom;
             }
             #up {
-                background: url('/graphics/other/icons/controls3.png');
+                background: url('./graphics/other/icons/controls3.png');
                 background-repeat: no-repeat;
                 background-size: 100% 100%;
 
                 grid-area: top;
             }
             #pass {
-                background: url('/graphics/other/icons/controls5.png');
+                background: url('./graphics/other/icons/controls5.png');
                 background-repeat: no-repeat;
                 background-size: 100% 100%;
 
