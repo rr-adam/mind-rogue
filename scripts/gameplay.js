@@ -418,7 +418,7 @@ class Player extends Entity {
         document.getElementById('profile-class').innerText = `class: ${this.class}`;
         document.getElementById('profile-name').innerText = `name: ${this.name}`;
         if(this.class == 'legion') {
-            heroPortraitElement.src = './graphics/heroes/hero7.png';
+            heroPortraitElement.src = 'graphics/heroes/hero7.png';
             this.stats.hp = 30;
             this.stats.maxhp = 30;
             this.stats.baseDmg = 3;
@@ -429,7 +429,7 @@ class Player extends Entity {
             this.stats.critPower = 1.3;
         }
         if(this.class == 'focus') {
-            heroPortraitElement.src = './graphics/heroes/hero6.png';
+            heroPortraitElement.src = 'graphics/heroes/hero6.png';
             this.stats.hp = 20;
             this.stats.maxhp = 20;
             this.stats.effectsImmunity = 2;
@@ -442,7 +442,7 @@ class Player extends Entity {
             this.stats.critPower = 1.4;
         }
         if(this.class == 'monk') {
-            heroPortraitElement.src = './graphics/heroes/hero5.png';
+            heroPortraitElement.src = 'graphics/heroes/hero5.png';
             this.stats.hp = 10;
             this.stats.maxhp = 10;
             this.stats.baseDmg = 2;
@@ -455,7 +455,7 @@ class Player extends Entity {
             this.stats.confusionPower = 2;
         }
         if(this.class == 'thief') {
-            heroPortraitElement.src = './graphics/heroes/hero4.png';
+            heroPortraitElement.src = 'graphics/heroes/hero4.png';
             this.stats.hp = 20;
             this.stats.maxhp = 20;
             this.stats.evasion = 5;
@@ -465,7 +465,7 @@ class Player extends Entity {
             this.stats.blindPower = 4;
         }
         if(this.class == 'mage') {
-            heroPortraitElement.src = './graphics/heroes/hero3.png';
+            heroPortraitElement.src = 'graphics/heroes/hero3.png';
             this.stats.hp = 15;
             this.stats.maxhp = 15;
             this.stats.effectsImmunity = 4;
@@ -475,7 +475,7 @@ class Player extends Entity {
             this.stats.blindPower = 4;
         }
         if(this.class == 'king') {
-            heroPortraitElement.src = './graphics/heroes/hero2.png';
+            heroPortraitElement.src = 'graphics/heroes/hero2.png';
             this.stats.hp = 45;
             this.stats.maxhp = 45;
             this.stats.effectsImmunity = 3;
@@ -484,7 +484,7 @@ class Player extends Entity {
             this.stats.critPower = 1.7;
         }
         if(this.class == 'berserk') {
-            heroPortraitElement.src = './graphics/heroes/hero1.png';
+            heroPortraitElement.src = 'graphics/heroes/hero1.png';
             this.stats.evasion = 5;
             this.stats.baseDmg = 4;
             this.stats.hp = 25;
