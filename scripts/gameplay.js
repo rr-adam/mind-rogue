@@ -497,7 +497,7 @@ class Player extends Entity {
     inspectItem(item, action) {
         const inspectElement = document.getElementById('inspect-item');
         
-        inspectElement.querySelector('.item-image').style.backgroundImage=`url(./graphics/items/${item.type}/${item.type}${item.img}.png)`;
+        inspectElement.querySelector('.item-image').style.backgroundImage=`url(graphics/items/${item.type}/${item.type}${item.img}.png)`;
         inspectElement.querySelector('.item-image').className = `item-image rarity-${item.rarity}`;
 
         inspectElement.querySelector('.item-name').innerText=item.name;
@@ -840,7 +840,7 @@ class Player extends Entity {
         const slotElement = document.createElement('div');
         slotElement.classList.add('slot');
         slotElement.classList.add(`rarity-${item.rarity}`);
-        slotElement.style.backgroundImage = `url(./graphics/items/${item.type}/${item.type}${item.img}.png)`;
+        slotElement.style.backgroundImage = `url(graphics/items/${item.type}/${item.type}${item.img}.png)`;
 
         slotElement.addEventListener('click', () => {
             if(item.type === 'consumable') {
@@ -858,7 +858,7 @@ class Player extends Entity {
         const slotElement = document.createElement('div');
         slotElement.classList.add('slot');
         slotElement.classList.add(`rarity-${item.rarity}`);
-        slotElement.style.backgroundImage = `url(./graphics/items/${item.type}/${item.type}${item.img}.png)`;
+        slotElement.style.backgroundImage = `url(graphics/items/${item.type}/${item.type}${item.img}.png)`;
 
         slotElement.addEventListener('click', () => {
             this.inspectItem(item, 'unequip');
@@ -1391,7 +1391,7 @@ class Game {
     renderEntities(startX, startY, maxWidth, maxHeight, tempDungeonElement) {
 
         // setup
-        const monsterImgPath = './graphics/entities/monsters/';
+        const monsterImgPath = 'graphics/entities/monsters/';
 
         //render player
         const playerCell = document.createElement('div');
