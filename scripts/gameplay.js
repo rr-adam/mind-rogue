@@ -376,8 +376,8 @@ class Entity {
             });
         }
 
-        this.effects.burn += attacker.stats.burnDmg;
-        this.effects.poison += attacker.stats.poisonDmg;
+        this.effects.burn += Math.max(0, attacker.stats.burnDmg - this.stats.effectsImmunity);
+        this.effects.poison += Math.max(0, attacker.stats.poisonDmg- this.stats.effectsImmunity);
 
         if(damage>0) {
             textQueue.push({
@@ -406,7 +406,7 @@ class Player extends Entity {
     inventory = [];
     inventorySize = 20;
     gold = 0;
-    class = 'berserk';
+    class = 'thief';
     
     eqWeapon = -1;
     eqArmor = -1;
@@ -459,10 +459,11 @@ class Player extends Entity {
             this.stats.hp = 20;
             this.stats.maxhp = 20;
             this.stats.evasion = 5;
-            this.stats.armor = 1;
-            this.stats.poisonDmg = 2;
-            this.stats.blindChance = 5;
-            this.stats.blindPower = 4;
+            this.stats.effectsImmunity = 2;
+            this.stats.armor = 2;
+            this.stats.poisonDmg = 3;
+            this.stats.blindChance = 15;
+            this.stats.blindPower = 5;
         }
         if(this.class == 'mage') {
             heroPortraitElement.src = 'graphics/heroes/hero3.png';
@@ -487,6 +488,7 @@ class Player extends Entity {
             heroPortraitElement.src = 'graphics/heroes/hero1.png';
             this.stats.evasion = 5;
             this.stats.baseDmg = 4;
+            this.stats.effectsImmunity = 2;
             this.stats.hp = 25;
             this.stats.maxhp = 25;
             this.stats.critChance = 10;
@@ -1543,11 +1545,20 @@ class Game {
         
         //apply player status effects
         this.applyPlayerStatusEffects();
+
+        this.checkPlayerDead();
+
         
         this.renderGameFrame(this.player.posX, this.player.posY);
+        this.player.updateProfileUI();
+
     }
 
-    //================= ENTITY AI
+    checkPlayerDead() {
+        if (this.player.stats.hp <= 0) {
+            window.location.href = 'youdied.html';
+        }
+    }
 
     entitiesLogic() {
         for(const entity of this.entities) {
