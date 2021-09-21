@@ -522,43 +522,43 @@ section.selected {
 }
 
 #dungeon-section .container .dungeon-map .map-container .wall {
-  background: url("/graphics/other/cells/cell2.png");
+  background: url("../graphics/other/cells/cell2.png");
 }
 
 #dungeon-section .container .dungeon-map .map-container .floor {
-  background: url("/graphics/other/cells/cell1.png");
+  background: url("../graphics/other/cells/cell1.png");
 }
 
 #dungeon-section .container .dungeon-map .map-container .stairs {
-  background: url("/graphics/other/cells/stairs.png");
+  background: url("../graphics/other/cells/stairs.png");
 }
 
 #dungeon-section .container .dungeon-map .map-container .legion {
-  background: url("/graphics/heroes/ingame/legion.gif");
+  background: url("../graphics/heroes/ingame/legion.gif");
 }
 
 #dungeon-section .container .dungeon-map .map-container .focus {
-  background: url("/graphics/heroes/ingame/focus.gif");
+  background: url("../graphics/heroes/ingame/focus.gif");
 }
 
 #dungeon-section .container .dungeon-map .map-container .monk {
-  background: url("/graphics/heroes/ingame/monk.gif");
+  background: url("../graphics/heroes/ingame/monk.gif");
 }
 
 #dungeon-section .container .dungeon-map .map-container .thief {
-  background: url("/graphics/heroes/ingame/thief.gif");
+  background: url("../graphics/heroes/ingame/thief.gif");
 }
 
 #dungeon-section .container .dungeon-map .map-container .mage {
-  background: url("/graphics/heroes/ingame/mage.gif");
+  background: url("../graphics/heroes/ingame/mage.gif");
 }
 
 #dungeon-section .container .dungeon-map .map-container .king {
-  background: url("/graphics/heroes/ingame/king.gif");
+  background: url("../graphics/heroes/ingame/king.gif");
 }
 
 #dungeon-section .container .dungeon-map .map-container .berserk {
-  background: url("/graphics/heroes/ingame/berserk.gif");
+  background: url("../graphics/heroes/ingame/berserk.gif");
 }
 
 #dungeon-section .container .dungeon-map .map-container .cell {
@@ -599,7 +599,7 @@ section.selected {
 }
 
 #dungeon-section .container .mobile-controls #right {
-  background: url("/graphics/other/icons/controls2.png");
+  background: url("../graphics/other/icons/controls2.png");
   background-repeat: no-repeat;
   background-size: 100% 100%;
   -ms-grid-row: 2;
@@ -608,7 +608,7 @@ section.selected {
 }
 
 #dungeon-section .container .mobile-controls #left {
-  background: url("/graphics/other/icons/controls1.png");
+  background: url("../graphics/other/icons/controls1.png");
   background-repeat: no-repeat;
   background-size: 100% 100%;
   -ms-grid-row: 2;
@@ -617,7 +617,7 @@ section.selected {
 }
 
 #dungeon-section .container .mobile-controls #down {
-  background: url("/graphics/other/icons/controls4.png");
+  background: url("../graphics/other/icons/controls4.png");
   background-repeat: no-repeat;
   background-size: 100% 100%;
   -ms-grid-row: 3;
@@ -626,7 +626,7 @@ section.selected {
 }
 
 #dungeon-section .container .mobile-controls #up {
-  background: url("/graphics/other/icons/controls3.png");
+  background: url("../graphics/other/icons/controls3.png");
   background-repeat: no-repeat;
   background-size: 100% 100%;
   -ms-grid-row: 1;
@@ -635,7 +635,7 @@ section.selected {
 }
 
 #dungeon-section .container .mobile-controls #pass {
-  background: url("/graphics/other/icons/controls5.png");
+  background: url("../graphics/other/icons/controls5.png");
   background-repeat: no-repeat;
   background-size: 100% 100%;
   -ms-grid-row: 2;
