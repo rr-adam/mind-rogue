@@ -558,6 +558,9 @@ class Game {
     }
 }
 
+if(!localStorage.getItem('selectedClass'))
+    window.location.href = 'index.html';
+
 const game = new Game;
 game.init(localStorage.getItem('seed'));
 
