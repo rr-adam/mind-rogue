@@ -1,0 +1,163 @@
+body {
+    background: black;
+    color: white;
+}
+
+.hero-select {
+    width: 100%;
+    height: 100%;
+
+    .container {
+        width: 100%;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-evenly;
+
+        .heroes {
+            width: 90%;
+
+            display: flex;
+            flex-wrap: wrap;
+
+            justify-content: center;
+
+
+            .hero {
+                width: 100px;
+                height: 150px;
+                background-size: cover;
+                margin: 15px;
+
+                border: rgb(90, 90, 90) solid 1px;
+                transition: box-shadow 0.3s;
+
+                text-align: center;
+                text-shadow: 0 0 5px black;
+                
+            }
+
+            .hero:hover {
+                cursor: pointer;
+            }
+
+            .selected {
+                box-shadow: 0 0 25px red,
+                            0 0 5px white;
+                border: black solid 1px;
+                animation-name: shadow-pulsing;
+                animation-iteration-count: infinite;
+                animation-duration: 2s;
+                animation-timing-function: linear;
+
+                text-shadow: 0 0 5px red;
+
+            }
+
+            #legion {
+                background-image: url('../graphics/heroes/hero7.png');
+            }
+            #focus {
+                background-image: url('../graphics/heroes/hero6.png');
+            }
+            #monk {
+                background-image: url('../graphics/heroes/hero5.png');
+            }
+            #thief {
+                background-image: url('../graphics/heroes/hero4.png');
+            }
+            #mage {
+                background-image: url('../graphics/heroes/hero3.png');
+            }
+            #king {
+                background-image: url('../graphics/heroes/hero2.png');
+            }
+            #berserk {
+                background-image: url('../graphics/heroes/hero1.png');
+            }
+
+        }
+
+
+        #seed-input {
+            width: 200px;
+        }
+
+        #generate-random-seed {
+            text-align: center;
+            width: 150px;
+            height: auto;
+            padding: 5px;
+            margin-top: 5px;
+            margin-bottom: 15px;
+            border: white solid 1px;
+            transition: box-shadow 0.4s;
+        }
+
+        #generate-random-seed:hover {
+            cursor: pointer;
+            box-shadow: inset 0 0 15px rgba(255, 255, 255, 0.664);
+        }
+
+        #startBtn {
+            text-align: center;
+            width: 20%;
+            min-width: 200px;
+            height: auto;
+            padding: 15px;
+            margin-top: 15px;
+            margin-bottom: 70px;
+            border: white solid 1px;
+            transition: box-shadow 0.4s, border 0.4s;
+            box-shadow: inset 0 0 15px rgba(136, 39, 39, 0.664);
+        }
+        #startBtn:hover {
+            cursor: pointer;
+            box-shadow: inset 0 0 25px rgba(247, 9, 9, 0.664);
+        }
+
+        
+    }
+}
+
+.blackoverlay {
+    position: fixed;
+    top:0;
+    left:0;
+    width: 100vw;
+    height: 100%;
+    background: black;
+    animation-name: disappear;
+    animation-duration: 2s;
+    animation-fill-mode: forwards;
+    animation-iteration-count: 1;
+    animation-timing-function: ease-in;
+    pointer-events: none;
+}
+
+@keyframes shadow-pulsing {
+    0% {
+        box-shadow: 0 0 2px rgba(255, 0, 0, 0),
+                    0 0 2px rgba(255, 0, 0, 0),
+                    0 0 5px white;
+    }
+    30% {
+        box-shadow: 0 0 12px red,
+                    0 0 5px red,
+                    0 0 5px white;
+    }
+    100% {
+        box-shadow: 0 0 57px rgba(255, 0, 0, 0),
+                    0 0 23px rgba(255, 0, 0, 0),
+                    0 0 5px white;
+    }
+  }
+
+@keyframes disappear {
+    0% {opacity:1}
+    99% {opacity:0;
+    top:0px}
+    100% {opacity:0;
+        top:100%}
+  }

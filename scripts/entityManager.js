@@ -15,7 +15,7 @@ class EntityManager {
         this.monsterDb[0].cssClass = 'monster-goblin';
         this.monsterDb[0].stats.maxhp = 4;
         this.monsterDb[0].stats.baseDmg = 2;
-        this.monsterDb[0].stats.armor = 2;
+        this.monsterDb[0].stats.armor = 1;
         this.monsterDb[0].stats.evasion = 3;
         this.monsterDb[0].stats.effectsImmunity = 0;
         this.monsterDb[0].stats.piercing = 1;
@@ -31,7 +31,7 @@ class EntityManager {
         this.monsterDb[1].cssClass = 'monster-snake';
         this.monsterDb[1].stats.maxhp = 16;
         this.monsterDb[1].stats.baseDmg = 2;
-        this.monsterDb[1].stats.armor = 2;
+        this.monsterDb[1].stats.armor = 1;
         this.monsterDb[1].stats.piercing = 1;
         this.monsterDb[1].stats.critPower = 1.5;
         this.monsterDb[1].stats.critChance = 5;

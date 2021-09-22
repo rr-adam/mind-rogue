@@ -5,164 +5,38 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>MIND ROGUE</title>
-    <link rel="stylesheet" href="styles/style.css">
+    <link rel="stylesheet" href="styles/index.css">
     <link rel="shortcut icon" type="image/ico" href="favicon.ico"/>
-    <script src="scripts/entityManager.js" defer></script>
-    <script src="scripts/mobileNavbar.js" defer></script>
-    <script src="scripts/sectionsController.js" defer></script>
-    <script src="scripts/gameplay.js" defer></script>
-
+    <script src="scripts/index.js" defer></script>
 </head>
 <body>
 
-    <div class="mob-bottom-navigation">
-        <ul>
-            <li id="mob-bottom-nav-hero">
-                <img src="graphics/other/icons/mobile_navigation_icon2.svg" alt="">
-                <p>HERO</p>
-            </li>
-            <li class="selected" id="mob-bottom-nav-dungeon">
-                <img src="graphics/other/icons/mobile_navigation_icon1.svg" alt="">
-                <p>DUNGEON</p>
-            </li>
-            <li id="mob-bottom-nav-menu">
-                <img src="graphics/other/icons/mobile_navigation_icon3.svg" alt="">
-                <p>MENU</p>
-            </li>
-        </ul>
-    </div>
-
-    <div id="black-overlay">
-
-    </div>
-
-
-
-    <section id="menu-section">
-        <div class="container">
-            <h2 id="stats">Statistics</h2>
-            <p>Current score: 123</p>
-            <p>Best score: 2222</p>
-            <p>Enemies defeated: 100</p>
-            <p>Current run time: 5:30</p>
-
-            <h2 id="options">Options</h2>
-            <p>Save game</p>
-            <p>Load game</p>
-            <p>Share RNG seed</p>
-            <p>Exit run</p>
-        </div>
-    </section>
-
-    <section id="dungeon-section" class="selected">
-        <div class="container">
-            
-            <div class="zoom-control">
-                <div id="zoom-in">+</div>
-                <div id="zoom-out">-</div>
-            </div>
-            <div class="dungeon-map" id = "dungeon-map">
-                
-                
-                <div class="map-container"></div>
-                <div class="fight-text-container"></div>
-            </div>
-            <div class="mobile-controls">
-                <div id="up" class="arrow"></div>
-                <div id="down" class="arrow"></div>
-                <div id="left" class="arrow"></div>
-                <div id="right" class="arrow"></div>
-                <div id="pass" class="action"></div>
-            </div>
-        </div>
-    </section>
-
-    <section id="hero-section">
-        <div id="inspect-item">
-            <div class="container">
-                <div class="destroy" id="destroy-item">Destroy item</div>
-                <div class="item-image"></div>
-                <div class="item-type">Armor</div>
-                <div class="item-name">Epic claws of legends</div>
-                <div class="item-rarity">Rare</div>
-                <div class="item-description"></div>
-                <div class="item-stats">damage +5</div>
-            </div>
-            <div class="btn-container">
-                <div class="cancel-btn">Cancel</div>
-                <div class="unequip-btn action">Unequip</div>
-                <div class="equip-btn action">Equip</div>
-                <div class="use-btn action">Use</div>
-            </div>
-        </div>
-        <div class="profile-container">
-            <h2>Hero profile</h2>
-            <div class="hero-portrait" id="hero-portrait">
-                <img src="graphics/heroes/hero7.png" alt="">
-            </div>
-
-            <div id="profile-card">
-                <p id="profile-name">name: Adam</p>
-                <p id="profile-class">class: warrior</p>
-                
-            </div>
-
-            
-            <p>HP</p>
-            <div id="hp-bar-container" class="resource-bar-container">
-                <div class="resource-bar-fill"></div>
-                <div class="resource-bar-text">123/123</div>
-            </div>
-
-            <div id="stats-container">
-                <p>BASE DAMAGE: 20</p>
-                <p>CRIT CHANCE: 10</p>
-                <p>CRIT POWER: x1.2</p>
-                <p>ARMOR: 10</p>
-                <p>PIERCING: 5</p>
-                <p>BURN DAMAGE: 5</p>
-                <p>POISON DAMAGE: 5</p>
-            </div>
-
-            <h2>Equipment</h2>
-
-            <div class="equipment" id='equipment'>
-                <div class="slot"></div>
-                <div class="slot"></div>
-                <div class="slot"></div>
-                <div class="slot"></div>
-            </div>
-
-            <h2>Inventory</h2>
-
-            <div class="inventory" id="inventory">
-                <div class="slot rarity-common"></div>
-                <div class="slot rarity-rare"></div>
-                <div class="slot rarity-legendary"></div>
-                <div class="slot"></div>
-                <div class="slot"></div>
-                <div class="slot"></div>
-                <div class="slot"></div>
-                <div class="slot"></div>
-                <div class="slot"></div>
-                <div class="slot"></div>
-                <div class="slot"></div>
-                <div class="slot"></div>
-                <div class="slot"></div>
-                <div class="slot"></div>
-                <div class="slot"></div>
-                <div class="slot"></div>
-                <div class="slot"></div>
-                <div class="slot"></div>
-                <div class="slot"></div>
-                <div class="slot"></div>
-            </div>
-            
-        </div>
-    </section>
-
+    <div class="blackoverlay"></div>
     
+    <section class="hero-select">
+        <div class="container">
+            <h1>Select your hero</h1>
 
+            <div class="heroes">
+                <div class="hero selected" id="legion">Legion</div>
+                <div class="hero " id="focus">Focus</div>
+                <div class="hero " id="monk">Monk</div>
+                <div class="hero " id="thief">Thief</div>
+                <div class="hero " id="king">King</div>
+                <div class="hero " id="mage">Mage</div>
+                <div class="hero " id="berserk">Berserk</div>
+            </div>
+
+            <div class="seed-container">
+                <h2>Enter RNG seed</h2>
+                <input type="text" id="seed-input">
+                <div id="generate-random-seed">Generate random</div>
+            </div>
+            
+
+            <div id="startBtn">Start game</div>
+        </div>
+    </section>
     
 
 </body>
