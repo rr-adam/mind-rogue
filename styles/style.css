@@ -5,8 +5,8 @@
   --zindex-selected-section: 1;
   --pixel-size: 2;
   --cell-size: 24;
-  --controls-width: 200px;
-  --controls-height: 150px;
+  --controls-width: 30vh;
+  --controls-height: 20vh;
 }
 
 * {
@@ -429,17 +429,11 @@ section.selected {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-}
-
-#dungeon-section .container .top-ui h2 {
-  margin-top: 30px;
-  font-size: 2em;
 }
 
 #dungeon-section .container .zoom-control {
@@ -447,15 +441,24 @@ section.selected {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  height: 10vh;
 }
 
 #dungeon-section .container .zoom-control div {
   border: white solid 1px;
-  width: 40px;
-  height: 40px;
+  width: 35px;
+  height: 35px;
+  font-size: 0.9em;
   text-align: center;
   margin: 5px;
-  padding: 5px;
+  padding: 2.5px;
+}
+
+#dungeon-section .container .zoom-control div:hover {
+  cursor: pointer;
 }
 
 #dungeon-section .container .dungeon-map {
@@ -596,6 +599,10 @@ section.selected {
       image-rendering: -moz-crisp-edges;
       image-rendering: -o-pixelated;
       image-rendering: pixelated;
+}
+
+#dungeon-section .container .mobile-controls div:hover {
+  cursor: pointer;
 }
 
 #dungeon-section .container .mobile-controls #right {
