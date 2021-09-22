@@ -500,7 +500,7 @@ class Player extends Entity {
     inspectItem(item, action) {
         const inspectElement = document.getElementById('inspect-item');
         
-        inspectElement.querySelector('.item-image').style.backgroundImage=`url(../graphics/items/${item.type}/${item.type}${item.img}.png)`;
+        inspectElement.querySelector('.item-image').style.backgroundImage=`url(./graphics/items/${item.type}/${item.type}${item.img}.png)`;
         inspectElement.querySelector('.item-image').className = `item-image rarity-${item.rarity}`;
 
         inspectElement.querySelector('.item-name').innerText=item.name;
