@@ -157,13 +157,11 @@ class Map {
         // 5. generate corridors between rooms
 
         for (const room of this.rooms) {
-            let secondRoom = this.rooms[parseInt(this.mapRNG.rand()*this.roomCount)];
+            if(this.rooms.indexOf(room)===0)
+                continue;
 
-            while(room === secondRoom || this.tileLayout[secondRoom.tileY][secondRoom.tileX] === 2) {
-                secondRoom = this.rooms[parseInt(this.mapRNG.rand()*this.roomCount)];
-            }
+            let secondRoom = this.rooms[Math.max(0,this.rooms.indexOf(room)-1)];
 
-            this.tileLayout[secondRoom.tileY][secondRoom.tileX] = 2;
 
             let cursorX = parseInt((room.posX+room.posX+room.sizeX)/2);
             let cursorY = parseInt((room.posY+room.posY+room.sizeY)/2);
