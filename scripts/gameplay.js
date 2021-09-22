@@ -68,7 +68,7 @@ class Item {
         level+=dropLevelBoost;
     
         const itemRarity = parseInt( dropRNG.randMinMax(0, 100));
-        let itemPower = parseInt( dropRNG.randMinMax(2*level, 999*(level/100)))+dropPowerBoost;
+        let itemPower = parseInt( dropRNG.randMinMax((999*(level/100))/2, 999*(level/100)))+dropPowerBoost;
         this.itemPower = itemPower;
 
         if (itemRarity < 80) {
@@ -77,11 +77,11 @@ class Item {
         } else if(itemRarity < 95) {
             this.rarity = 'rare';
             this.img = parseInt(dropRNG.randMinMax(15,22));
-            itemPower+=parseInt(dropRNG.randMinMax(120*(level/100)/2, 120*(level/100)));
+            itemPower=parseInt(itemPower*1.4);
         } else {
             this.rarity = 'legendary';
             this.img = parseInt(dropRNG.randMinMax(23,26));
-            itemPower+=parseInt(dropRNG.randMinMax(400*(level/100)/2, 400*(level/100)));
+            itemPower=parseInt(itemPower*2);
         }
 
         const typeRand = dropRNG.rand();
@@ -90,24 +90,24 @@ class Item {
             //weapon
             this.type = 'weapon';
             
-            this.stats.baseDmg = parseInt(dropRNG.randMinMax(itemPower/1000*1000/2, itemPower/1000*1000));
+            this.stats.baseDmg = parseInt(dropRNG.randMinMax(itemPower/1000*15000/2, itemPower/1000*15000));
             this.stats.piercing = parseInt(dropRNG.randMinMax(itemPower/1000*1000/2, itemPower/1000*1000));
-            this.stats.critChance = parseInt(dropRNG.randMinMax(0, 1+itemPower/1000*15));
-            this.stats.critPower = +((dropRNG.rand()*itemPower/1000*5)).toFixed(2);
+            this.stats.critChance = parseInt(dropRNG.randMinMax(1+itemPower/1000*35/4, 1+itemPower/1000*35));
+            this.stats.critPower = +((dropRNG.rand()*itemPower/1000*10)).toFixed(2);
 
-            if(dropRNG.rand() > 0.7) {
+            if(dropRNG.rand() > 0.5) {
                 this.stats.blindChance = 1+parseInt(dropRNG.randMinMax(1+itemPower/1000*15/2, 1+itemPower/1000*50));
-                this.stats.blindPower = 1+parseInt(dropRNG.randMinMax(2, 2+itemPower/1000*10));
+                this.stats.blindPower = 1+parseInt(dropRNG.randMinMax(2, 2+itemPower/1000*50));
             }
 
-            if(dropRNG.rand() > 0.7) {
+            if(dropRNG.rand() > 0.5) {
                 this.stats.confusionChance = 1+parseInt(dropRNG.randMinMax(1+itemPower/1000*15/2, 1+itemPower/1000*50));
-                this.stats.confusionPower = 1+parseInt(dropRNG.randMinMax(2, 2+itemPower/1000*10));
+                this.stats.confusionPower = 1+parseInt(dropRNG.randMinMax(2, 2+itemPower/1000*50));
             }
 
-            if(dropRNG.rand() > 0.7) {
+            if(dropRNG.rand() > 0.5) {
                 this.stats.rootChance = 1+parseInt(dropRNG.randMinMax(1+itemPower/1000*15/2, 1+itemPower/1000*50));
-                this.stats.rootPower = 1+parseInt(dropRNG.randMinMax(2, 2+itemPower/1000*10));
+                this.stats.rootPower = 1+parseInt(dropRNG.randMinMax(2, 2+itemPower/1000*50));
             }
 
             if(dropRNG.rand() > 0.93) {
@@ -406,7 +406,7 @@ class Player extends Entity {
     inventory = [];
     inventorySize = 20;
     gold = 0;
-    class = 'thief';
+    class = 'monk';
     
     eqWeapon = -1;
     eqArmor = -1;
@@ -479,10 +479,11 @@ class Player extends Entity {
             heroPortraitElement.src = 'graphics/heroes/hero2.png';
             this.stats.hp = 45;
             this.stats.maxhp = 45;
+            this.stats.armor = 5;
             this.stats.effectsImmunity = 3;
             this.stats.piercing = 3;
-            this.stats.critChance = 2;
-            this.stats.critPower = 1.7;
+            this.stats.critChance = 5;
+            this.stats.critPower = 1.8;
         }
         if(this.class == 'berserk') {
             heroPortraitElement.src = 'graphics/heroes/hero1.png';
@@ -756,6 +757,9 @@ class Player extends Entity {
         }
         if(item.type === 'ring') {
             this.eqRing = -1;
+        }
+        if(this.stats.hp > this.stats.maxhp) {
+            this.stats.hp = this.stats.maxhp;
         }
 
         this.renderInventory();

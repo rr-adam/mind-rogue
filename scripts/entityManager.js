@@ -46,7 +46,7 @@ class EntityManager {
         this.monsterDb[2].stats.maxhp = 242;
         this.monsterDb[2].stats.baseDmg = 54;
         this.monsterDb[2].stats.armor = 22;
-        this.monsterDb[2].stats.piercing = 2;
+        this.monsterDb[2].stats.piercing = 12;
         this.monsterDb[2].stats.critPower = 1.8;
         this.monsterDb[2].stats.critChance = 6;
         this.monsterDb[2].stats.burnDmg = 0;
@@ -61,7 +61,7 @@ class EntityManager {
         this.monsterDb[3].stats.baseDmg = 75;
         this.monsterDb[3].stats.armor = 32;
         this.monsterDb[3].stats.effectsImmunity = 2;
-        this.monsterDb[3].stats.piercing = 23;
+        this.monsterDb[3].stats.piercing = 33;
         this.monsterDb[3].stats.critPower = 2;
         this.monsterDb[3].stats.critChance = 8;
         this.monsterDb[3].stats.burnDmg = 2;
@@ -76,7 +76,7 @@ class EntityManager {
         this.monsterDb[4].stats.baseDmg = 127;
         this.monsterDb[4].stats.armor = 54;
         this.monsterDb[4].stats.effectsImmunity = 1;
-        this.monsterDb[4].stats.piercing = 25;
+        this.monsterDb[4].stats.piercing = 225;
         this.monsterDb[4].stats.critPower = 2;
         this.monsterDb[4].stats.critChance = 5;
         this.monsterDb[4].stats.burnDmg = 0;
@@ -91,7 +91,7 @@ class EntityManager {
         this.monsterDb[5].stats.baseDmg = 27;
         this.monsterDb[5].stats.armor = 5;
         this.monsterDb[5].stats.effectsImmunity = 3;
-        this.monsterDb[5].stats.piercing = 2;
+        this.monsterDb[5].stats.piercing = 482;
         this.monsterDb[5].stats.critPower = 4;
         this.monsterDb[5].stats.critChance = 15;
         this.monsterDb[5].stats.burnDmg = 2;
